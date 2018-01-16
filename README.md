@@ -1,2 +1,2 @@
-# Parus Tester
-QmlCore and Controls components tester
+# Parus
+QmlCore and Controls component tester
