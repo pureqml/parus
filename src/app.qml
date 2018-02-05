@@ -2,12 +2,11 @@ Item {
 	anchors.fill: context;
 
 	ListView {
+		id: menu;
 		width: 20%;
 		height: 100%;
 		spacing: 5;
-		model: ListModel {
-			ListElement { title: "Rectangle"; }
-		}
+		model: ListModel { }
 		delegate: WebItem {
 			width: 100%;
 			height: 60;
@@ -31,5 +30,15 @@ Item {
 		height: 100%;
 
 		RectangleTest {}
+
+		onCompleted: {
+			var menuData = []
+			var children = this.children
+
+			for (var i = 0; i < children.length; ++i)
+				menuData.push({ title: children[i].title })
+
+			menu.model.append(menuData)
+		}
 	}
 }
