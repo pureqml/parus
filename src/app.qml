@@ -3,6 +3,8 @@ Item {
 
 	ListView {
 		id: menu;
+		x: 5;
+		y: 5;
 		width: 20%;
 		height: 100%;
 		spacing: 5;
@@ -10,7 +12,7 @@ Item {
 		delegate: WebItem {
 			width: 100%;
 			height: 60;
-			color: "#00f";
+			color: activeFocus ? "#00f" : "#626262";
 
 			Text {
 				width: 100%;
@@ -21,6 +23,8 @@ Item {
 				verticalAlignment: Text.AlignVCenter;
 				horizontalAlignment: Text.AlignHCenter;
 			}
+
+			onClicked: { menu.currentIndex = this._local.model.index }
 		}
 	}
 
@@ -28,6 +32,7 @@ Item {
 		x: 20%;
 		width: 80%;
 		height: 100%;
+		currentIndex: menu.currentIndex;
 
 		RectangleTest {}
 
