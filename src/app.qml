@@ -24,7 +24,7 @@ Item {
 				horizontalAlignment: Text.AlignHCenter;
 			}
 
-			onClicked: { menu.currentIndex = this._local.model.index }
+			onClicked: { menu.currentIndex = model.index }
 		}
 	}
 
@@ -35,6 +35,7 @@ Item {
 		currentIndex: menu.currentIndex;
 
 		RectangleTest {}
+		TextTest {}
 
 		onCompleted: {
 			var menuData = []
