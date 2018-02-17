@@ -23,7 +23,6 @@ Item {
 		//animationDuration: 200;
 		//layoutDelay: 500;
 		//prerenderDelay: 1000
-		animationDuration: 200;
 		model: ListModel {
 			ListElement { } ListElement { } ListElement { } ListElement { }
 			ListElement { } ListElement { } ListElement { } ListElement { }
