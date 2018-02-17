@@ -1,5 +1,4 @@
 {
 	"name": "parus-tester",
-	"platforms": ["web"],
-	"minify": true
+	"platforms": ["web"]
 }
