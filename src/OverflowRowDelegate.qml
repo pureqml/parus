@@ -18,6 +18,8 @@ Item {
 		keyNavigationWraps: false;
 		orientation: ListView.Horizontal;
 		positionMode: ListView.Center;
+		//content.cssNullTranslate3D: true;
+		//content.cssTranslatePositioning: true;
 		model: ListModel {
 			ListElement { } ListElement { } ListElement { } ListElement { }
 			ListElement { } ListElement { } ListElement { } ListElement { }

@@ -18,6 +18,8 @@ Item {
 			spacing: 30;
 			keyNavigationWraps: false;
 			positionMode: ListView.Center;
+			//content.cssNullTranslate3D: true;
+			//content.cssTranslatePositioning: true;
 			delegate: OverflowRowDelegate {}
 			model: ListModel {
 				ListElement { } ListElement { } ListElement { } ListElement { }
