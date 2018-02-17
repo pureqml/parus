@@ -20,6 +20,10 @@ Item {
 		positionMode: ListView.Center;
 		//content.cssNullTranslate3D: true;
 		//content.cssTranslatePositioning: true;
+		//animationDuration: 200;
+		//layoutDelay: 500;
+		//prerenderDelay: 1000
+		animationDuration: 200;
 		model: ListModel {
 			ListElement { } ListElement { } ListElement { } ListElement { }
 			ListElement { } ListElement { } ListElement { } ListElement { }
