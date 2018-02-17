@@ -1,5 +1,4 @@
 Item {
-	id: mainWindow;
 	width: 1280;
 	height: 720;
 	anchors.margins: 10;
