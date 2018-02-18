@@ -4,9 +4,10 @@ Rectangle {
 	color: activeFocus ? "#f00" : "#424242";
 
 	Image {
-		anchors.fill: parent;
-		anchors.margins: 10;
-		source: "assets/doge.png";
+		anchors.centerIn: parent;
+		width: 110;
+		height: 110;
+		source: "assets/doge-110x110.png";
 	}
 
 	Text {
