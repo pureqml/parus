@@ -36,6 +36,7 @@ Item {
 
 		RectangleTest {}
 		TextTest {}
+		ImageTest {}
 
 		onCompleted: {
 			var menuData = []
