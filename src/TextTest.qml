@@ -88,8 +88,8 @@ TestPage {
 		x: 350;
 		width: 350;
 		height: 250;
-
-		Border { width: 2; color: "#f00"; }
+		border.width: 2;
+		border.color: "#f00";
 
 		Text {
 			width: 100%;
@@ -116,6 +116,40 @@ TestPage {
 			text: "AlignBottom";
 			font.pixelSize: 24;
 			verticalAlignment: Text.AlignBottom;
+		}
+	}
+
+	Rectangle {
+		x: 20;
+		y: 280;
+		width: 270;
+		height: 100;
+		border.width: 2;
+		border.color: "#f00";
+
+		Text {
+			width: 100%;
+			color: "#000";
+			font.pixelSize: 24;
+			text: "<b>WordWrap:</b> brown fox jumps over lazy dog";
+			wrapMode: Text.WordWrap;
+		}
+	}
+
+	Rectangle {
+		x: 20;
+		y: 400;
+		width: 270;
+		height: 100;
+		border.width: 2;
+		border.color: "#f00";
+
+		Text {
+			width: 100%;
+			color: "#000";
+			font.pixelSize: 24;
+			text: "<b>WrapAnywhere:</b> brown fox jumps over lazy dog";
+			wrapMode: Text.WrapAnywhere;
 		}
 	}
 }
