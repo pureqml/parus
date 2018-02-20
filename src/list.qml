@@ -17,11 +17,8 @@ Item {
 			spacing: 30;
 			keyNavigationWraps: false;
 			positionMode: ListView.Center;
-			//content.cssNullTranslate3D: true;
-			//content.cssTranslatePositioning: true;
-			//animationDuration: 200;
-			//layoutDelay: 500;
-			//prerenderDelay: 1000
+			prerenderDelay: 200;
+			prerender: 1;
 			delegate: OverflowRowDelegate {}
 			model: ListModel {
 				ListElement { } ListElement { } ListElement { } ListElement { }

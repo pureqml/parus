@@ -8,7 +8,7 @@ Item {
 		font.pixelSize: 20;
 	}
 
-	ListView {
+	RollerView {
 		y: 20;
 		width: 100%;
 		height: 130;
@@ -18,11 +18,6 @@ Item {
 		keyNavigationWraps: false;
 		orientation: ListView.Horizontal;
 		positionMode: ListView.Center;
-		//content.cssNullTranslate3D: true;
-		//content.cssTranslatePositioning: true;
-		//animationDuration: 200;
-		//layoutDelay: 500;
-		//prerenderDelay: 1000
 		model: ListModel {
 			ListElement { } ListElement { } ListElement { } ListElement { }
 			ListElement { } ListElement { } ListElement { } ListElement { }
