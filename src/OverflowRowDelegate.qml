@@ -9,21 +9,22 @@ Item {
 	}
 
 	RollerView {
+		x: 65;
 		y: 20;
 		width: 100%;
 		height: 130;
 		prerender: 5;
-		spacing: 10;
+		spacing: 7;
 		clip: true;
 		keyNavigationWraps: false;
-		orientation: ListView.Horizontal;
-		positionMode: ListView.Center;
+		offlineLayout: true;
+		orientation: RollerView.Horizontal;
+		animationDuration: 300;
+		prerenderDelay: 500;
+		content.cssTranslatePositioning: true;
+		content.x: 65;
+		positionMode: RollerView.Beginning;
 		model: ListModel {
-			ListElement { } ListElement { } ListElement { } ListElement { }
-			ListElement { } ListElement { } ListElement { } ListElement { }
-			ListElement { } ListElement { } ListElement { } ListElement { }
-			ListElement { } ListElement { } ListElement { } ListElement { }
-			ListElement { } ListElement { } ListElement { } ListElement { }
 			ListElement { } ListElement { } ListElement { } ListElement { }
 			ListElement { } ListElement { } ListElement { } ListElement { }
 		}

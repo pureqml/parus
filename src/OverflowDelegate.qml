@@ -1,5 +1,5 @@
 Rectangle {
-	width: height;
+	width: 223;
 	height: 100%;
 	color: activeFocus ? "#f00" : "#424242";
 
