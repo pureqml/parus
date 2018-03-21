@@ -38,6 +38,7 @@ Item {
 		TextTest {}
 		ImageTest {}
 		EffectsTest {}
+		TimerTest {}
 
 		onCompleted: {
 			var menuData = []
