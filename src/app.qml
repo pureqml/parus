@@ -26,6 +26,8 @@ Item {
 
 			onClicked: { menu.currentIndex = model.index }
 		}
+
+		FocusOnHoverMixin { }
 	}
 
 	PageStack {
@@ -39,6 +41,7 @@ Item {
 		ImageTest {}
 		EffectsTest {}
 		TimerTest {}
+		MixinTest {}
 
 		onCompleted: {
 			var menuData = []
