@@ -49,7 +49,7 @@ TestPage {
 	Text {
 		x: 320;
 		y: 10;
-		text: "Model with '<= 500'";
+		text: "Model filter: '>= 500'";
 		color: "#000";
 		font.pixelSize: 24;
 	}
@@ -63,7 +63,6 @@ TestPage {
 			target: testModel;
 
 			onCompleted: {
-				// this.setCompare(function(a, b) { return a.value >= 500 ? 1 : -1 })
 				this.setFilter(function(item) { return item.value >= 500 })
 			}
 		}
