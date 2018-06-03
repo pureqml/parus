@@ -6,8 +6,8 @@ TestPage {
 		y: 30;
 		width: 100%;
 		height: 100%;
-		horizontalSpacing: 20;
-		verticalSpacing: 50;
+		//horizontalSpacing: 20;
+		//verticalSpacing: 50;
 
 		MixinRect {
 			color: "red";

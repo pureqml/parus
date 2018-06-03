@@ -77,4 +77,40 @@ TestPage {
 				"Border.color: " + parent.border.color;
 		}
 	}
+
+	Rectangle {
+		x: 700;
+		y: 350;
+		width: 100;
+		height: 100;
+		color: '#00f';
+		opacity: 0.5;
+
+		Rectangle {
+			border.type: Border.Inner;
+			anchors.fill: parent;
+			border.width: 10;
+			border.color: '#0f0';
+			color: '#f00';
+			opacity: 0.7;
+		}
+	}
+
+	Rectangle {
+		x: 850;
+		y: 350;
+		width: 100;
+		height: 100;
+		color: '#00f';
+		opacity: 0.5;
+
+		Rectangle {
+			border.type: Border.Outer;
+			anchors.fill: parent;
+			border.width: 10;
+			border.color: '#0f0';
+			color: '#f00';
+			opacity: 0.7;
+		}
+	}
 }
