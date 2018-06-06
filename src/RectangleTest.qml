@@ -79,7 +79,7 @@ TestPage {
 	}
 
 	Rectangle {
-		x: 700;
+		x: 650;
 		y: 350;
 		width: 100;
 		height: 100;
@@ -93,11 +93,16 @@ TestPage {
 			border.color: '#0f0';
 			color: '#f00';
 			opacity: 0.7;
+
+			Text {
+				color: "#0f0";
+				text: "Inner";
+			}
 		}
 	}
 
 	Rectangle {
-		x: 850;
+		x: 770;
 		y: 350;
 		width: 100;
 		height: 100;
@@ -111,6 +116,34 @@ TestPage {
 			border.color: '#0f0';
 			color: '#f00';
 			opacity: 0.7;
+
+			Text {
+				color: "#0f0";
+				text: "Outer";
+			}
+		}
+	}
+
+	Rectangle {
+		x: 900;
+		y: 350;
+		width: 100;
+		height: 100;
+		color: '#00f';
+		opacity: 0.5;
+
+		Rectangle {
+			border.type: Border.Center;
+			anchors.fill: parent;
+			border.width: 10;
+			border.color: '#0f0';
+			color: '#f00';
+			opacity: 0.7;
+
+			Text {
+				color: "#0f0";
+				text: "Center:" + parent.width;
+			}
 		}
 	}
 }
