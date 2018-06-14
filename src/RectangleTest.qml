@@ -142,7 +142,7 @@ TestPage {
 
 			Text {
 				color: "#0f0";
-				text: "Center:" + parent.width;
+				text: "Center";
 			}
 		}
 	}
