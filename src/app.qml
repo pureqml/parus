@@ -43,6 +43,7 @@ Item {
 		TimerTest {}
 		MixinTest {}
 		ProxyModelTest {}
+		SpriteTest {}
 
 		onCompleted: {
 			var menuData = []
