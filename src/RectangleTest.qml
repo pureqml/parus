@@ -146,4 +146,22 @@ TestPage {
 			}
 		}
 	}
+
+	Rectangle {
+		x: 10;
+		y: 500;
+		width: 300;
+		height: 300;
+
+		Gradient {
+			GradientStop { position: 0.0; color: "red"; }
+			GradientStop { position: 1.0; color: "blue"; }
+		}
+
+		Text {
+			color: "#fff";
+			anchors.centerIn: parent;
+			text: "Gardient from red to blue";
+		}
+	}
 }
