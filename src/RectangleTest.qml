@@ -164,4 +164,36 @@ TestPage {
 			text: "Gardient from red to blue";
 		}
 	}
+
+	RectBorderSideItem {
+		x: 320;
+		y: 500;
+		border.left.width: 4;
+		border.left.color: "#f00";
+		text: "Left border";
+	}
+
+	RectBorderSideItem {
+		x: 480;
+		y: 500;
+		border.right.width: 4;
+		border.right.color: "#f00";
+		text: "Right border";
+	}
+
+	RectBorderSideItem {
+		x: 320;
+		y: 660;
+		border.bottom.width: 4;
+		border.bottom.color: "#f00";
+		text: "Bottom border";
+	}
+
+	RectBorderSideItem {
+		x: 480;
+		y: 660;
+		border.top.width: 4;
+		border.top.color: "#f00";
+		text: "Top border";
+	}
 }
