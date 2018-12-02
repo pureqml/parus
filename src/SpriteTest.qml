@@ -16,13 +16,13 @@ TestPage {
 				if (spriteRect.hover.value)
 					spriteRect.width--;
 				else
-					testSprite.currentFrame = (--testSprite.currentFrame + testSprite.totalFrames ) % testSprite.totalFrames;
+					testSprite.currentFrame = (--testSprite.currentFrame + testSprite.frameCount ) % testSprite.frameCount;
 				break;
 			case 'Right':
 				if (spriteRect.hover.value)
 					spriteRect.width++;
 				else
-					testSprite.currentFrame = ++testSprite.currentFrame % testSprite.totalFrames;
+					testSprite.currentFrame = ++testSprite.currentFrame % testSprite.frameCount;
 				break;
 			case 'R':
 				testSprite.repeat = !testSprite.repeat;
@@ -69,16 +69,16 @@ TestPage {
 				font.pixelSize: 10;
 				color: "#626262";
 				text: "Source height:<b> " + testSprite.paintedHeight + "</b>, width: <b> "
-					+ testSprite.paintedWidth + "</b>";
+					+ testSprite.sourceWidth + "</b>";
 			}
 
 			Rectangle {
 				x: (testSprite.currentFrame % testSprite.cols) * width;
 				y: Math.floor(testSprite.currentFrame / testSprite.cols) * height;
-				width: testSprite.width / testSprite.paintedWidth * 100%;
+				width: testSprite.width / testSprite.sourceWidth * 100%;
 				height: testSprite.height / testSprite.paintedHeight * 100%;
 				border.width: 1;
-				border.color: (testSprite.height > testSprite.paintedHeight) || (testSprite.width > testSprite.paintedWidth) ? "red" : "#4CAF50";
+				border.color: (testSprite.height > testSprite.paintedHeight) || (testSprite.width > testSprite.sourceWidth) ? "red" : "#4CAF50";
 			}
 		}
 	}
@@ -95,7 +95,7 @@ TestPage {
 
 		AnimatedSprite {
 			id: testSprite;
-			property int cols: Math.floor(paintedWidth / width);
+			property int cols: Math.floor(sourceWidth / width);
 			source: spriteTestProto.source;
 			width: 100%;
 			height: 100%;
@@ -233,13 +233,13 @@ TestPage {
 		}
 
 		InputWrapper {
-			property int safeNum: Math.floor(testSprite.paintedWidth / testSprite.width) * Math.floor(testSprite.paintedHeight / testSprite.height);
-			text: 'Total number of frames <span style="color:#'  + (safeNum < testSprite.totalFrames ? 'EE5555' : '55AA55') + ';">(safe&nbsp;number&nbsp;is&nbsp;' + safeNum + ')</span>';
+			property int safeNum: Math.floor(testSprite.sourceWidth / testSprite.width) * Math.floor(testSprite.paintedHeight / testSprite.height);
+			text: 'Total number of frames <span style="color:#'  + (safeNum < testSprite.frameCount ? 'EE5555' : '55AA55') + ';">(safe&nbsp;number&nbsp;is&nbsp;' + safeNum + ')</span>';
 			NumberInput {
 				id: frames;
 				height: 32; width: 60;
 				font.pixelSize: 16;
-				onValueChanged: { testSprite.totalFrames = value; if (testSprite.running) testSprite.restart() }
+				onValueChanged: { testSprite.frameCount = value; if (testSprite.running) testSprite.restart() }
 				Border { width: 1; color: "#AAA"; }
 				onCompleted: { this.value = 6;}
 			}
@@ -287,19 +287,24 @@ TestPage {
 
 		Row {
 			spacing: 8;
+
 			WebItem {
-				width: 80; height: 30;
+				width: 80;
+				height: 30;
 				radius: 5;
 				border.width: 1;
 				border.color: testSprite.running ? "#EF6C00" : "#8BC34A";
 				color: hover ? border.color : "transparent";
-				Behavior on background { Animation { duration: 500; }}
+
 				TextMixin {
 					text: testSprite.running ? "Pause" : "Start";
 					color: parent.hover ? "white" : "#626262";
 					Behavior on color { Animation { duration: 500; }}
 				}
+
 				onClicked: { testSprite.running = !testSprite.running; }
+
+				Behavior on background { Animation { duration: 500; }}
 			}
 			WebItem {
 				width: 30; height: 30;
@@ -333,7 +338,7 @@ TestPage {
 				y: 5;
 				color: "#00695C";
 				icon: 'fast_rewind';
-				onClicked: { testSprite.currentFrame = (--testSprite.currentFrame + testSprite.totalFrames ) % testSprite.totalFrames }
+				onClicked: { testSprite.currentFrame = (--testSprite.currentFrame + testSprite.frameCount) % testSprite.frameCount }
 			}
 
 			Text {
@@ -348,7 +353,7 @@ TestPage {
 				y: 5;
 				color: "#00695C";
 				icon: "fast_forward";
-				onClicked: { testSprite.currentFrame = ++testSprite.currentFrame % testSprite.totalFrames }
+				onClicked: { testSprite.currentFrame = ++testSprite.currentFrame % testSprite.frameCount }
 			}
 		}
 
