@@ -44,6 +44,7 @@ Item {
 		MixinTest {}
 		ProxyModelTest {}
 		SpriteTest {}
+		SequentialAnimationTest {}
 
 		onCompleted: {
 			var menuData = []
