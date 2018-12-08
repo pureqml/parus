@@ -1,0 +1,1 @@
+MaterialIcon { ClickMixin {} }

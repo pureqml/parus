@@ -2,7 +2,7 @@ TestPage {
 	id: spriteTestProto;
 	property string source;
 	title: "Sprites";
-	source: "assets/szombie1w.png";
+	source: "assets/inferno.png";
 
 	onCompleted: { this.setFocus(); }
 
@@ -108,25 +108,25 @@ TestPage {
 			opacity: parent.hover.value;
 			Behavior on opacity { Animation { duration: 300; }}
 
-			MaterialButton {
+			ClickMaterialButton {
 				icon: "remove_circle_outline";
 				x: 20; y: 2;
 				onClicked: { spriteRect.width--; }
 			}
 
-			MaterialButton {
+			ClickMaterialButton {
 				icon: "add_circle_outline";
 				x: 40; y: 2;
 				onClicked: { spriteRect.width++; }
 			}
 
-			MaterialButton {
+			ClickMaterialButton {
 				icon: "remove_circle_outline";
 				x: 2; y: 20;
 				onClicked: { spriteRect.height--; }
 			}
 
-			MaterialButton {
+			ClickMaterialButton {
 				icon: "add_circle_outline";
 				x: 2; y: 40;
 				onClicked: { spriteRect.height++; }
@@ -265,7 +265,7 @@ TestPage {
 			font.pixelSize: 16;
 			onValueChanged: { spriteRect.width = value; if (testSprite.running) testSprite.restart() }
 			Border { width: 1; color: "#AAA"; }
-			onCompleted: { this.value = 121;}
+			onCompleted: { this.value = 206;}
 		}}
 
 		InputWrapper { text: "Frame height"; NumberInput {
@@ -275,7 +275,7 @@ TestPage {
 			font.pixelSize: 16;
 			onValueChanged: { spriteRect.height = value; if (testSprite.running) testSprite.restart() }
 			Border { width: 1; color: "#AAA"; }
-			onCompleted: { this.value = 181;}
+			onCompleted: { this.value = 217;}
 		}}
 
 		InputWrapper { text: "Background color"; ColorInput {
@@ -326,6 +326,7 @@ TestPage {
 		Row {
 			spacing: 5;
 			height: 32;
+
 			Text {
 				anchors.verticalCenter: parent.verticalCenter;
 				font.pixelSize: 20;
@@ -334,7 +335,7 @@ TestPage {
 				text: "Current frame ";
 			}
 
-			MaterialButton {
+			ClickMaterialButton {
 				y: 5;
 				color: "#00695C";
 				icon: 'fast_rewind';
@@ -349,7 +350,7 @@ TestPage {
 				text: testSprite.currentFrame;
 			}
 
-			MaterialButton {
+			ClickMaterialButton {
 				y: 5;
 				color: "#00695C";
 				icon: "fast_forward";
