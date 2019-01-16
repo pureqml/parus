@@ -196,4 +196,25 @@ TestPage {
 		border.top.color: "#f00";
 		text: "Top border";
 	}
+
+	Rectangle {
+		y: 500;
+		x: 700;
+		width: 300;
+		height: 300;
+		color: '#03dac6';
+		border.color: '#018786';
+		border.width: 10;
+
+		radius.topLeft: 40;
+		Text { anchors.top: parent.top; anchors.left: parent.left; anchors.margins: 20; text: "40px"; }
+
+		radius.topRight: 100;
+		Text { anchors.top: parent.top; anchors.right: parent.right; anchors.margins: 50; text: "100px"; }
+
+		radius.bottomLeft: 150;
+		Text { anchors.bottom: parent.bottom; anchors.left: parent.left; anchors.margins: 55; text: "150px"; }
+		radius.bottomRight: 60;
+		Text { anchors.bottom: parent.bottom; anchors.right: parent.right; anchors.margins: 40; text: "60px"; }
+	}
 }
