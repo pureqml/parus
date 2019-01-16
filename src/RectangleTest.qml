@@ -20,7 +20,7 @@ TestPage {
 			text: "Color: " + parent.color + "<br>" +
 				"Width: " + parent.width + "<br>" +
 				"Height: " + parent.height + "<br>" +
-				"Radius: " + parent.radius + "<br>" +
+				"Radius: " + parent.radius.radius + "<br>" +
 				"Border.width: " + parent.border.width + "<br>" +
 				"Border.color: " + parent.border.color;
 		}
@@ -46,7 +46,7 @@ TestPage {
 			text: "Color: " + parent.color + "<br>" +
 				"Width: " + parent.width + "<br>" +
 				"Height: " + parent.height + "<br>" +
-				"Radius: " + parent.radius + "<br>" +
+				"Radius: " + parent.radius.radius + "<br>" +
 				"Border.width: " + parent.border.width + "<br>" +
 				"Border.color: " + parent.border.color;
 		}
@@ -72,7 +72,7 @@ TestPage {
 			text: "Color: " + parent.color + "<br>" +
 				"Width: " + parent.width + "<br>" +
 				"Height: " + parent.height + "<br>" +
-				"Radius: " + parent.radius + "<br>" +
+				"Radius: " + parent.radius.radius + "<br>" +
 				"Border.width: " + parent.border.width + "<br>" +
 				"Border.color: " + parent.border.color;
 		}
