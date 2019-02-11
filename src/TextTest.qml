@@ -1,7 +1,7 @@
 TestPage {
 	width: 100%;
 	height: 100%;
-	title: "Text";
+	title: tr("Text");
 
 	Column {
 		x: 20;

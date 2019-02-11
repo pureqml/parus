@@ -2,7 +2,7 @@ TestPage {
 	property string testImage: "assets/doge-110x110.png";
 	width: 100%;
 	height: 100%;
-	title: "Image";
+	title: tr("Image");
 
 	Image {
 		x: 20;

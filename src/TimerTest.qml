@@ -1,5 +1,5 @@
 TestPage {
-	title: "Timer";
+	title: tr("Timer");
 
 	Timer {
 		interval: 3000;

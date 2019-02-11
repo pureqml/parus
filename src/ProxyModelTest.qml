@@ -1,5 +1,5 @@
 TestPage {
-	title: "ProxyModel";
+	title: tr("ProxyModel");
 
 	ListModel {
 		id: testModel;

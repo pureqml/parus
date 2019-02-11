@@ -1,5 +1,5 @@
 TestPage {
-	title: "Mixins";
+	title: tr("Mixins");
 
 	Grid {
 		x: 20;

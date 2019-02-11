@@ -1,7 +1,7 @@
 TestPage {
 	width: 100%;
 	height: 100%;
-	title: "SeqAnimation";
+	title: tr("SeqAnimation");
 
 	Image {
 		id : doge;

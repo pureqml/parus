@@ -1,7 +1,7 @@
 TestPage {
 	id: spriteTestProto;
 	property string source;
-	title: "Sprites";
+	title: tr("Sprites");
 	source: "assets/inferno.png";
 
 	onCompleted: { this.setFocus(); }

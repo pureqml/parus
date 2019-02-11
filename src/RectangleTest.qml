@@ -1,5 +1,5 @@
 TestPage {
-	title: "Rectangle";
+	title: tr("Rectangle");
 
 	Rectangle {
 		x: 10;
