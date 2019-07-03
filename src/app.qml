@@ -45,6 +45,7 @@ Item {
 		ProxyModelTest {}
 		SpriteTest {}
 		SequentialAnimationTest {}
+		ScrollbarTest {}
 
 		onCompleted: {
 			var menuData = []
