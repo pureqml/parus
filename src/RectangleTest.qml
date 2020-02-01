@@ -95,6 +95,7 @@ TestPage {
 			opacity: 0.7;
 
 			Text {
+				anchors.centerIn: parent;
 				color: "#0f0";
 				text: "Inner";
 			}
@@ -118,6 +119,7 @@ TestPage {
 			opacity: 0.7;
 
 			Text {
+				anchors.centerIn: parent;
 				color: "#0f0";
 				text: "Outer";
 			}
@@ -141,6 +143,7 @@ TestPage {
 			opacity: 0.7;
 
 			Text {
+				anchors.centerIn: parent;
 				color: "#0f0";
 				text: "Center";
 			}
