@@ -94,10 +94,18 @@ TestPage {
 			color: '#f00';
 			opacity: 0.7;
 
-			Text {
+			Rectangle {
+				width: 70;
+				height: 20;
 				anchors.centerIn: parent;
-				color: "#0f0";
-				text: "Inner";
+				color: "black";
+
+				Text {
+					width: 100%;
+					horizontalAlignment: Text.AlignHCenter;
+					color: "#0f0";
+					text: "Inner";
+				}
 			}
 		}
 	}
@@ -118,10 +126,18 @@ TestPage {
 			color: '#f00';
 			opacity: 0.7;
 
-			Text {
+			Rectangle {
+				width: 70;
+				height: 20;
 				anchors.centerIn: parent;
-				color: "#0f0";
-				text: "Outer";
+				color: "black";
+
+				Text {
+					width: 100%;
+					horizontalAlignment: Text.AlignHCenter;
+					color: "#0f0";
+					text: "Outer";
+				}
 			}
 		}
 	}
@@ -142,10 +158,18 @@ TestPage {
 			color: '#f00';
 			opacity: 0.7;
 
-			Text {
+			Rectangle {
+				width: 70;
+				height: 20;
 				anchors.centerIn: parent;
-				color: "#0f0";
-				text: "Center";
+				color: "black";
+
+				Text {
+					width: 100%;
+					horizontalAlignment: Text.AlignHCenter;
+					color: "#0f0";
+					text: "Center";
+				}
 			}
 		}
 	}
