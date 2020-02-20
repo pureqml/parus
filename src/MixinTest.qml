@@ -116,6 +116,14 @@ TestPage {
 				onHorizontalSwiped: { this.parent.description = "HORIZONTAL SWIPE" }
 			}
 		}
+
+		MixinRect {
+			color: "red";
+			description: "Hovered:" + disableHoverByTimeoutMixin.value;
+			title: "DisableHoverByTimeout";
+
+			DisableHoverByTimeoutMixin { id: disableHoverByTimeoutMixin; }
+		}
 	}
 
 	//TODO: Impl CssMixin, PositionMixin
