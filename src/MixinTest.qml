@@ -6,8 +6,6 @@ TestPage {
 		y: 30;
 		width: 100%;
 		height: 100%;
-		//horizontalSpacing: 20;
-		//verticalSpacing: 50;
 
 		MixinRect {
 			color: "red";
@@ -126,5 +124,15 @@ TestPage {
 		}
 	}
 
-	//TODO: Impl CssMixin, PositionMixin
+	MixinRect {
+		x: 500;
+		y: 500;
+		color: "red";
+		description: "Hovered";
+		title: "Fixed PositionMixin: x:" + x + ", y:" + y;
+
+		PositionMixin { value: PositionMixin.Fixed; }
+	}
+
+	//TODO: Impl CssMixin
 }
