@@ -3,7 +3,7 @@
 	"platforms": ["web"],
 	"properties": {
 		"title": "parus",
-		"domain": "com.pureqml",
+		"domain": "com.pureqml.parus",
 		"hostname": "android",
 		"author": {
 			"name": "Pureqml Team",
