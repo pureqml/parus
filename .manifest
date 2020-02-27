@@ -1,4 +1,15 @@
 {
 	"name": "parus-tester",
-	"platforms": ["web"]
+	"platforms": ["web"],
+	"properties": {
+		"title": "parus",
+		"domain": "com",
+		"hostname": "android",
+		"author": {
+			"name": "Pureqml Team",
+			"email": "team@pureqml.com",
+			"organization": "PureQML",
+			"site": "https://pureqml.com"
+		}
+	}
 }
