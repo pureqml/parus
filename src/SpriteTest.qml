@@ -241,7 +241,7 @@ TestPage {
 				font.pixelSize: 16;
 				onValueChanged: { testSprite.frameCount = value; if (testSprite.running) testSprite.restart() }
 				Border { width: 1; color: "#AAA"; }
-				onCompleted: { this.value = 6;}
+				onCompleted: { this.value = 16;}
 			}
 		}
 
@@ -265,7 +265,7 @@ TestPage {
 			font.pixelSize: 16;
 			onValueChanged: { spriteRect.width = value; if (testSprite.running) testSprite.restart() }
 			Border { width: 1; color: "#AAA"; }
-			onCompleted: { this.value = 206;}
+			onCompleted: { this.value = 207;}
 		}}
 
 		InputWrapper { text: "Frame height"; NumberInput {
