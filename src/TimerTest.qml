@@ -25,6 +25,7 @@ TestPage {
 		color: triggered ? "#0f0" : "#f00";
 		font.pixelSize: 32;
 		text: "This text color must change every 3 second";
+		Behavior on color { ColorAnimation { duration: 1000; }}
 	}
 
 

@@ -188,7 +188,7 @@ TestPage {
 		Text {
 			color: "#fff";
 			anchors.centerIn: parent;
-			text: "Gardient from red to blue";
+			text: "Gradient from red to blue";
 		}
 	}
 
