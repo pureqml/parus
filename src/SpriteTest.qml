@@ -188,7 +188,7 @@ TestPage {
 					anchors.centerIn: parent;
 					text: "refresh";
 					color: parent.hover ? "white" : "#0097A7";
-					Behavior on color { Animation { duration: 500; }}
+					Behavior on color { ColorAnimation { duration: 500; }}
 				}
 				onClicked: { if (spriteTestProto.imageFile) spriteTestProto.reloadImage(); }
 			}
@@ -226,7 +226,7 @@ TestPage {
 				TextMixin {
 					text: "Set URL";
 					color: parent.hover ? "white" : "#626262";
-					Behavior on color { Animation { duration: 500; }}
+					Behavior on color { ColorAnimation { duration: 500; }}
 				}
 				onClicked: { testSprite.stop(); spriteTestProto.source = urlInput.text; }
 			}
@@ -299,7 +299,7 @@ TestPage {
 				TextMixin {
 					text: testSprite.running ? "Pause" : "Start";
 					color: parent.hover ? "white" : "#626262";
-					Behavior on color { Animation { duration: 500; }}
+					Behavior on color { ColorAnimation { duration: 500; }}
 				}
 
 				onClicked: { testSprite.running = !testSprite.running; }
@@ -317,7 +317,7 @@ TestPage {
 					anchors.centerIn: parent;
 					text: "autorenew";
 					color: testSprite.repeat ? "white" : "#0097A7";
-					Behavior on color { Animation { duration: 250; }}
+					Behavior on color { ColorAnimation { duration: 250; }}
 				}
 				onClicked: { testSprite.repeat = !testSprite.repeat; }
 			}
