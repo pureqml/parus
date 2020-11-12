@@ -58,8 +58,23 @@ TestPage {
 			if (detailedText.height > detailedContainer.height)
 				detailedText.shift = detailedText.shift - 50 > detailedContainer.height - detailedText.height ? detailedText.shift - 50 : (detailedContainer.height - detailedText.height)
 		}
-
 	}
 
+	ListView {
+		id: detailedContainer;
+		x: 30;
+		y: 300;
+		width: 400;
+		height: 250;
+		spacing: 10;
+		model: ListModel { ListElement { } ListElement { } ListElement { } ListElement { } ListElement { } ListElement { } ListElement { } ListElement { } }
+		delegate: Rectangle {
+			width: 100%;
+			height: 100;
+			color: "red";
+
+			ClickMixin { }
+		}
+	}
 }
 
