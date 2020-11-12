@@ -61,7 +61,6 @@ TestPage {
 	}
 
 	ListView {
-		id: detailedContainer;
 		x: 30;
 		y: 300;
 		width: 400;
