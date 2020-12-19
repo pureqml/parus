@@ -28,8 +28,9 @@ TestPage {
 		x: 10;
 		y: 60;
 		width: 200;
-		height: 100%;
+		height: 90%;
 		model: testModel;
+		nativeScrolling: true;
 		delegate: Rectangle {
 			width: 100%;
 			height: 50;
@@ -58,7 +59,8 @@ TestPage {
 		x: 320;
 		y: 60;
 		width: 200;
-		height: 100%;
+		height: 90%;
+		nativeScrolling: true;
 		model: ProxyModel {
 			target: testModel;
 
@@ -94,7 +96,8 @@ TestPage {
 		x: 630;
 		y: 60;
 		width: 200;
-		height: 100%;
+		height: 90%;
+		nativeScrolling: true;
 		model: ProxyModel {
 			target: testModel;
 
@@ -114,6 +117,69 @@ TestPage {
 				text: model.value;
 				verticalAlignment: Text.AlignVCenter;
 				horizontalAlignment: Text.AlignHCenter;
+			}
+		}
+	}
+
+	Button {
+		id: generateLargeModelButton;
+		text: "Generate Large Model";
+		anchors.bottom: parent.bottom;
+		anchors.horizontalCenter : parent.horizontalCenter;
+		anchors.margins: 10;
+		color: "#f00";
+		textColor: "#fff";
+		onClicked: {
+			log("generating large model")
+			testModel.clear()
+			var N = 3000
+			var rows = []
+			for(var i = 0; i < N; ++i) {
+				rows.push({value: i, color: "#000"})
+			}
+			for (var i = N - 1; i > 0; --i) {
+				var j = Math.floor(Math.random() * (i + 1));
+				var t = rows[i];
+				rows[i] = rows[j];
+				rows[j] = t;
+			}
+			for(var i = 0; i < N; ++i)
+				testModel.append(rows[i])
+		}
+	}
+
+	Button {
+		id: inefficientClearButton;
+		text: "Inefficient clear";
+		anchors.left : generateLargeModelButton.right;
+		anchors.bottom: parent.bottom;
+		anchors.margins: 10;
+		color: "#f00";
+		textColor: "#fff";
+		onClicked: {
+			log("clearing model using single-row remove")
+			var n = testModel.count
+			while(n--) {
+				testModel.remove(0)
+			}
+		}
+	}
+
+	Button {
+		text: "Negate All";
+		anchors.left : inefficientClearButton.right;
+		anchors.bottom: parent.bottom;
+		anchors.horizontalCenter : parent.horizontalCenter;
+		anchors.margins: 10;
+		color: "#f00";
+		textColor: "#fff";
+		onClicked: {
+			log("updating all")
+			var n = testModel.count
+			for(var i = 0; i < n; ++i) {
+				var row = testModel.get(i)
+				row.value = -row.value
+				testModel.set(i, row)
 			}
 		}
 	}
