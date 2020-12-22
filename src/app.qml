@@ -46,6 +46,7 @@ Item {
 		SpriteTest {}
 		SequentialAnimationTest {}
 		ScrollbarTest {}
+		TableViewTest {}
 
 		onCompleted: {
 			var menuData = []
