@@ -7,9 +7,8 @@ TestPage {
 
     TableView {
         id: tableView;
-        //trace: true;
-        //nativeScrolling: true;
-        contentFollowsCurrentItem: true;
+        trace: true;
+        clip: true;
         anchors.fill: parent;
         anchors.margins: 40;
         model: tableModel;
@@ -32,8 +31,12 @@ TestPage {
             }
             ClickMixin {}
             onClicked: {
+                this.view.nativeScrolling = true
                 tableView.currentIndex = model.index
             }
+        }
+        onKeyPressed: {
+            this.nativeScrolling = false
         }
     }
 
