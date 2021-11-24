@@ -152,4 +152,45 @@ TestPage {
 			wrapMode: Text.WrapAnywhere;
 		}
 	}
+
+	ComboBoxInput {
+		y: 500;
+		width: 100%;
+		height: 50;
+		model: ListModel {
+			id: comboBoxModel;
+			ListElement { value: "Chocolate" }
+			ListElement { value: "Coconut" }
+			ListElement { value: "Mint" }
+			ListElement { value: "Vanilla" }
+		}
+		onTextChanged: {
+			log("combo text changed to " + value)
+		}
+	}
+
+	Button {
+		text: "PRESS ME";
+		y: 600;
+		width: 100;
+		height: 50;
+		color: "red";
+		onClicked: {
+			var n = comboBoxModel.count
+			var src = Math.floor(Math.random() * n)
+			var dst = Math.floor(Math.random() * n)
+			log("updating combo model", src, dst)
+			if (src === dst) {
+				var value = comboBoxModel.get(src).value
+				comboBoxModel.setProperty(dst, "value", value + "+")
+			} else {
+				var row = comboBoxModel.get(src)
+				comboBoxModel.remove(src)
+				if (dst > src)
+					--dst
+				comboBoxModel.insert(dst, row)
+			}
+		}
+	}
+
 }
