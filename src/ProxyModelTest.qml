@@ -16,7 +16,7 @@ TestPage {
 		ListElement { value: 900; color: "#212121"; }
 	}
 
-	Text {
+	core.Text {
 		x: 10;
 		y: 10;
 		text: "Original model";
