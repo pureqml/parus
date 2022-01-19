@@ -18,36 +18,31 @@ TestPage {
 		Text {
 			color: "#000";
 			text: "Italic text";
-			font.italic: 24;
-			font.pixelSize: 24;
+			font { italic: 24; pixelSize: 24; }
 		}
 
 		Text {
 			color: "#000";
 			text: "Bold text";
-			font.bold: true;
-			font.pixelSize: 24;
+			font { bold: true; pixelSize: 24; }
 		}
 
 		Text {
 			color: "#000";
 			text: "Underline text";
-			font.underline: true;
-			font.pixelSize: 24;
+			font { underline: true; pixelSize: 24; }
 		}
 
 		Text {
 			color: "#000";
 			text: "Strike text";
-			font.strike: true;
-			font.pixelSize: 24;
+			font { strike: true; pixelSize: 24; }
 		}
 
 		Text {
 			color: "#000";
 			text: "letterSpacing: 5px";
-			font.pixelSize: 24;
-			font.letterSpacing: 5;
+			font { pixelSize: 24; letterSpacing: 5; }
 		}
 	}
 
