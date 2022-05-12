@@ -16,11 +16,19 @@ TestPage {
 			focus: !model.unfocusable;
 			color: activeFocus ? 'red' : (model.unfocusable ? 'gray' : 'blue');
 
+			ClickMixin { }
+
 			Text {
+				width: 96%;
 				anchors.centerIn: parent;
-				visible: model.unfocusable;
-				text: "UNFOCUSABLE";
+				horizontalAlignment: Text.AlignHCenter;
+				wrapMode: Text.WordWrap;
+				text: model.unfocusable ? "UNFOCUSABLE<br>click to make focusable" : "click to make unfocusable";
 				color: "#fff";
+			}
+
+			onClicked: {
+				this.parent.model.setProperty(model.index, "unfocusable", !model.unfocusable)
 			}
 		}
 
