@@ -46,12 +46,14 @@ TestPage {
 		}
 	}
 
+	Rectangle { anchors.fill: textAlignmentColumn; border.width: 2; border.color: "#00f"; }
+
 	Column {
+		id : textAlignmentColumn;
+
 		y: 10;
 		x: 350;
 		width: 350;
-
-		Border { width: 2; color: "#00f"; }
 
 		Text {
 			width: 100%;
@@ -87,8 +89,7 @@ TestPage {
 		border.color: "#f00";
 
 		Text {
-			width: 100%;
-			height: 100%;
+			anchors.fill: parent;
 			color: "#000";
 			text: "AlignTop";
 			font.pixelSize: 24;
@@ -96,8 +97,7 @@ TestPage {
 		}
 
 		Text {
-			width: 100%;
-			height: 100%;
+			anchors.fill: parent;
 			color: "#000";
 			text: "AlignVCenter";
 			font.pixelSize: 24;
@@ -105,8 +105,7 @@ TestPage {
 		}
 
 		Text {
-			width: 100%;
-			height: 100%;
+			anchors.fill: parent;
 			color: "#000";
 			text: "AlignBottom";
 			font.pixelSize: 24;
