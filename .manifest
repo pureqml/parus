@@ -1,6 +1,7 @@
 {
 	"name": "parus-tester",
 	"platforms": ["web"],
+	"languages": ["en", "ru"],
 	"properties": {
 		"title": "parus",
 		"domain": "com.pureqml.parus",
