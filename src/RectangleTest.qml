@@ -78,6 +78,13 @@ TestPage {
 		}
 	}
 
+	ConicalGradientItem {
+		x: 1050;
+		y: 10;
+		width: 300;
+		height: 300;
+	}
+
 	Rectangle {
 		x: 650;
 		y: 350;
