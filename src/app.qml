@@ -8,6 +8,8 @@ Item {
 		width: 20%;
 		height: 100%;
 		spacing: 5;
+		handleNavigationKeys: true;
+		focus: true;
 		model: ListModel { }
 		delegate: WebItem {
 			width: 100%;
