@@ -5,7 +5,6 @@ TestPage {
 		trace: true;
 		clip: true;
 		anchors.fill: parent;
-		spacing: 20;
 		anchors.margins: 40;
 		cellWidth: 150;
 		cellHeight: 100;
