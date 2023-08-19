@@ -163,9 +163,18 @@ TestPage {
 		}
 	}
 
+	TextInput {
+		y: 600;
+		width: 100%;
+		height: 50;
+		placeholder.text: "PLACEHOLDER";
+		placeholder.color: "#e0e";
+		placeholder.font.family: "Comic Sans MS";
+	}
+
 	Button {
 		text: "PRESS ME";
-		y: 600;
+		y: 700;
 		width: 100;
 		height: 50;
 		color: "red";
