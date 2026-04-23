@@ -39,6 +39,7 @@ Item {
 		currentIndex: menu.currentIndex;
 
 		RectangleTest {}
+		RadiusClipTest {}
 		TextTest {}
 		ImageTest {}
 		EffectsTest {}
