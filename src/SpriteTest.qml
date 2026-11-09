@@ -149,7 +149,7 @@ TestPage {
 		var reader  = new FileReader();
 
 		reader.onloadend = function () {
-			this.testSprite.stop();
+			testSprite.stop();
 			this.source = reader.result;
 		}.bind(this)
 
